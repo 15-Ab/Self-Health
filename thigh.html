@@ -1,0 +1,132 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thigh </title>
+    <link rel="stylesheet" href="selftest_style.css">
+    <!-- Google Fonts Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;800&display=swap" rel="stylesheet"/>
+    <!--Line Awesome CDN Link-->
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"/>
+    
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+      
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="data_css.css" />
+</head>
+  <body>
+    <h1 style="font-family:poppins;background-color:orange;text-align:center;font-size: 3.2em; margin-top: 0.20em;font-color:white;color:white">Analyze your thigh</h1>
+     <section id="sec-1">
+      <div class="main-container">
+        <h2>1. Are you experiencing any of the following symptoms?</h2>
+        <div class="radio-buttons">
+          <label class="custom-radio">
+            <input type="radio" name="ques1.a" id="q1a">
+            <span class="radio-btn">
+              <i class="las la-check"></i>
+              <div class="amartya-icon">
+                <img src="https://cdn-icons-png.flaticon.com/128/5728/5728219.png"/>
+                <h3>Inner Thigh Pain</h3>
+              </div>
+            </span>
+          </label>
+          <label class="custom-radio">
+            <input type="radio" name="ques1.b" id="q1b">
+            <span class="radio-btn">
+		          <i class="las la-check"></i>
+              <div class="amartya-icon">
+                <img src="https://cdn-icons-png.flaticon.com/128/2999/2999230.png"/>
+                <h3>Itching thigh</h3>
+              </div>
+            </span>
+          </label>
+          <label class="custom-radio">
+            <input type="radio" name="ques1.c" id="q1c">
+            <span class="radio-btn">
+		          <i class="las la-check"></i>
+              <div class="amartya-icon">
+                <img width="130 px" height="130 px" src="https://tse2.mm.bing.net/th?id=OIP.ETRGTtlDNb49KqT7clfwnQHaMf&pid=Api&P=0"/>
+                <h3>Burning feeling on thigh</h3>
+              </div>
+            </span>
+          </label>
+          <label class="custom-radio">
+            <input type="radio" name="ques1.d" id="q1d" >
+            <span class="radio-btn">
+		          <i class="las la-check"></i>
+              <div class="amartya-icon">
+                <img width="145 px" height="145 px"src="https://media.istockphoto.com/id/1473889337/vector/thigh-pain-body-ache-color-icon-vector-illustration.jpg?s=612x612&w=0&k=20&c=qioDNLsaz2jdSbeoLei3UWpJr0f9H4ZFfff-CzwT4Ts="/>
+                <h3>Thigh Cramp</h3>
+              </div>
+            </span>
+          </label>
+        </div>
+      </div>
+	  </section>
+	
+<input type="submit" name="submit" value="SUBMIT" id="nav" onclick="result()" class="scroll-down5">
+<!-- <input type="back" name="back" value="BACK" onclick="window.location.href ='selftest_index.html';" class="scroll-down6">  -->
+
+    <!-- <section id="sec-res">
+      <div class="main-container">
+        <h2>Reults based on your symptoms are :</h2>
+        <div class="box-container">
+            <div class="box" id="res-a" style="display:none">
+                <img width="200px" height="200px" src="https://tse1.mm.bing.net/th?id=OIP.CpCJCwTzFXguLKmFnSIPCAHaHa&pid=Api&P=0">
+                <p  class ="box" >Thrombophlebitis <br> How Common : 300,000 to 600,000 people have deep vein thrombosis or pulmonary embolism from thrombophlebitis each year. Many more go undiagnosed.</p>
+            </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="tips" id="sec-res">
+        <h1 class="heading"> Reults based on your symptoms are :</h1>
+        <div class="box-container">
+            <div class="box" id="res-a" style="display:none">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.CpCJCwTzFXguLKmFnSIPCAHaHa&pid=Api&P=0" alt="">
+                <h3>Thrombophlebitis </h3>
+                <p>How Common : 300,000 to 600,000 people have deep vein thrombosis or pulmonary embolism from thrombophlebitis each year. Many more go undiagnosed.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- FOR NEXT BUTTON-->
+<!-- <section id="sec-1">
+    <div class="container">
+      <a href="#sec-res">
+        <div class="scroll-down1"></div>
+      </a>
+    </div>
+  </section> -->
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>    <!-- Alert Box Link -->
+
+  <script type="text/javascript">
+
+	function result() {
+        window.location.href = "#sec-res";
+	    var status= document.getElementById('res-a');
+	
+	    if(document.getElementById('q1a').checked == true)
+	    {
+		status.style.display = "block";
+	    }
+	
+	    if(document.getElementById('free').checked)
+	    {
+		status="Your infection risk is low. We recommend that you should stay at home to avoid any chance of exposure to the Novel Coronavirus. \n\n\nRetake the Self-Assessment Test if you develop symptoms or come in contact with a COVID-19 confirmed patient.\n Stay home and take care of yourself and your family";
+	    }
+	
+	    //swal(status);
+        //document.write(status);
+        //document.getElementById("res").innerHTML = status;
+        }
+
+</script>
+
+</body>
+</html>
